@@ -4,14 +4,14 @@
     android:layout_height="match_parent"
     android:background="@color/cs_bg"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="20dp">
 
     <TextView
         style="@style/CS.Heading"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/lists_title"
-        android:textSize="20sp" />
+        android:textSize="24sp" />
 
     <Spinner
         android:id="@+id/spinnerListType"
@@ -33,7 +33,7 @@
         android:layout_marginTop="8dp"
         android:layout_weight="1"
         android:divider="@android:color/transparent"
-        android:dividerHeight="6dp" />
+        android:dividerHeight="8dp" />
 
     <TextView
         android:id="@+id/textEmptyList"
