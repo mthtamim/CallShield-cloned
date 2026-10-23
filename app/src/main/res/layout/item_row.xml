@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- v1.2.0: list rows are cards (surface + border, 14dp radius). The
-     gap between rows comes from the ListView's transparent divider. -->
+<!-- Comfortable, touch-friendly card row used in lists and call history. -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@drawable/bg_row"
     android:orientation="vertical"
-    android:padding="12dp">
+    android:padding="16dp">
 
     <TextView
         android:id="@+id/textTitle"
@@ -20,5 +19,5 @@
         style="@style/CS.Caption"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="2dp" />
+        android:layout_marginTop="4dp" />
 </LinearLayout>
