@@ -24,7 +24,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:padding="16dp">
+                android:padding="20dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -57,10 +57,10 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginTop="20dp"
                     android:background="@drawable/bg_hero"
                     android:orientation="vertical"
-                    android:padding="16dp">
+                    android:padding="20dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -453,7 +453,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:padding="16dp">
+                android:padding="20dp">
 
                 <TextView
                     style="@style/CS.Heading"
@@ -473,7 +473,7 @@
                     style="@style/CS.CardMenu"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="14dp"
+                    android:layout_marginTop="18dp"
                     android:orientation="vertical">
                     <LinearLayout
                         android:id="@+id/btnLists"
@@ -669,20 +669,20 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:padding="16dp">
+                android:padding="20dp">
 
                 <TextView
                     style="@style/CS.Heading"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/smart_title"
-                    android:textSize="20sp" />
+                    android:textSize="24sp" />
 
                 <LinearLayout
                     style="@style/CS.Card"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="14dp"
+                    android:layout_marginTop="18dp"
                     android:orientation="vertical">
 
                     <TextView
@@ -998,7 +998,7 @@
                     style="@style/CS.Button"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="14dp"
+                    android:layout_marginTop="18dp"
                     android:text="@string/save" />
             </LinearLayout>
         </ScrollView>
@@ -1009,7 +1009,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:padding="16dp"
+            android:padding="20dp"
             android:visibility="gone">
 
             <TextView
@@ -1017,7 +1017,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/log_title"
-                android:textSize="20sp" />
+                android:textSize="24sp" />
 
             <TextView
                 style="@style/CS.Caption"
@@ -1091,7 +1091,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:padding="16dp">
+                android:padding="20dp">
 
                 <TextView
                     style="@style/CS.Heading"
@@ -1104,7 +1104,7 @@
                     style="@style/CS.CardMenu"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="14dp"
+                    android:layout_marginTop="18dp"
                     android:orientation="vertical">
                     <LinearLayout
                         android:id="@+id/btnStats"
@@ -1482,11 +1482,11 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="64dp"
+        android:layout_height="76dp"
         android:background="@color/cs_bottombar"
         android:orientation="horizontal"
-        android:paddingTop="6dp"
-        android:paddingBottom="6dp">
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp">
 
         <LinearLayout
             android:id="@+id/tabDashboard"
@@ -1498,10 +1498,10 @@
 
             <ImageView
                 android:id="@+id/iconDashboard"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
                 android:contentDescription="@string/tab_dashboard"
-                android:src="@drawable/ic_home" />
+                android:src="@drawable/ic_home" android:background="?android:attr/selectableItemBackground"\n            />
 
             <TextView
                 android:id="@+id/labelDashboard"
@@ -1534,7 +1534,7 @@
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:contentDescription="@string/tab_filtering"
-                android:src="@drawable/ic_filter" />
+                android:src="@drawable/ic_filter" android:background="?android:attr/selectableItemBackground"\n            />
 
             <TextView
                 android:id="@+id/labelFiltering"
@@ -1567,7 +1567,7 @@
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:contentDescription="@string/smart_title"
-                android:src="@drawable/ic_clock" />
+                android:src="@drawable/ic_clock" android:background="?android:attr/selectableItemBackground"\n            />
 
             <TextView
                 android:id="@+id/labelSmart"
@@ -1600,7 +1600,7 @@
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:contentDescription="@string/tab_log"
-                android:src="@drawable/ic_list" />
+                android:src="@drawable/ic_list" android:background="?android:attr/selectableItemBackground"\n            />
 
             <TextView
                 android:id="@+id/labelLog"
@@ -1633,7 +1633,7 @@
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:contentDescription="@string/nav_settings"
-                android:src="@drawable/ic_gear" />
+                android:src="@drawable/ic_gear" android:background="?android:attr/selectableItemBackground"\n            />
 
             <TextView
                 android:id="@+id/labelSettings"
