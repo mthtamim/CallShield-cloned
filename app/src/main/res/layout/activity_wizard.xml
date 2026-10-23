@@ -1,103 +1,132 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/cs_bg"
-    android:orientation="vertical"
-    android:padding="20dp">
-
-    <TextView
-        style="@style/CS.Heading"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/wizard_title"
-        android:textSize="24sp" />
-
-    <TextView
-        android:id="@+id/textWizardProgress"
-        style="@style/CS.Caption"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp" />
-
-    <ProgressBar
-        android:id="@+id/progressWizard"
-        style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="match_parent"
-        android:layout_height="6dp"
-        android:layout_marginTop="8dp"
-        android:progressTint="@color/cs_accent" />
+    android:fillViewport="true">
 
     <LinearLayout
-        style="@style/CS.Card"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="18dp"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:padding="22dp">
 
         <TextView
-            android:id="@+id/textWizardTag"
             style="@style/CS.Caption"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="4dp"
-            android:text="@string/wizard_optional"
-            android:textColor="@color/cs_accent_dark"
-            android:visibility="gone" />
+            android:text="@string/app_name"
+            android:textAllCaps="true"
+            android:letterSpacing="0.12"
+            android:textColor="@color/cs_accent_dark" />
 
         <TextView
             android:id="@+id/textWizardStepTitle"
             style="@style/CS.Heading"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textSize="28sp" />
 
         <TextView
             android:id="@+id/textWizardBody"
             style="@style/CS.Body"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp" />
+            android:layout_marginTop="8dp"
+            android:lineSpacingExtra="3dp" />
 
-        <TextView
-            android:id="@+id/textWizardStatus"
-            style="@style/CS.Caption"
+        <LinearLayout
+            style="@style/CS.Card"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp" />
+            android:layout_marginTop="22dp"
+            android:orientation="vertical">
 
-        <Button
-            android:id="@+id/btnWizardAction"
-            style="@style/CS.Button"
+            <TextView
+                style="@style/CS.Heading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/wizard_setup_required"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textWizardProgress"
+                style="@style/CS.Caption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp" />
+
+            <ProgressBar
+                android:id="@+id/progressWizard"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:layout_marginTop="12dp"
+                android:progressTint="@color/cs_accent"
+                android:progressBackgroundTint="@color/cs_divider" />
+
+            <LinearLayout
+                android:id="@+id/layoutWizardRequired"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical" />
+
+            <TextView
+                android:id="@+id/textWizardStatus"
+                style="@style/CS.Body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnWizardAction"
+                style="@style/CS.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:text="@string/wizard_setup_next" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/CS.Card"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp" />
-    </LinearLayout>
+            android:layout_marginTop="14dp"
+            android:orientation="vertical">
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1" />
+            <TextView
+                style="@style/CS.Heading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/wizard_setup_optional"
+                android:textSize="18sp" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+            <TextView
+                style="@style/CS.Caption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/wizard_setup_optional_body" />
 
-        <Button
-            android:id="@+id/btnWizardBack"
-            style="@style/CS.ButtonSecondary"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/wizard_back" />
+            <LinearLayout
+                android:id="@+id/layoutWizardOptional"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:orientation="vertical" />
+        </LinearLayout>
 
         <Button
             android:id="@+id/btnWizardNext"
-            style="@style/CS.Button"
-            android:layout_width="0dp"
+            style="@style/CS.ButtonSecondary"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_weight="1"
-            android:text="@string/wizard_next" />
+            android:layout_marginTop="18dp"
+            android:layout_marginBottom="16dp"
+            android:text="@string/wizard_setup_continue" />
+
     </LinearLayout>
-</LinearLayout>
+</ScrollView>
