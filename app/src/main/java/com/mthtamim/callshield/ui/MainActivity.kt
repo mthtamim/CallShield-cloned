@@ -355,6 +355,11 @@ class MainActivity : BaseActivity() {
         val muted = getColor(R.color.cs_text_secondary)
         for (i in tabLabels.indices) {
             val selected = i == page
+            // Give the whole destination a rounded active surface and a full
+            // touch target; do not rely on a tiny ripple over the icon only.
+            tabItems[i].setBackgroundResource(
+                if (selected) R.drawable.bg_nav_selected else R.drawable.bg_nav_ripple
+            )
             tabLabels[i].setTextColor(if (selected) accent else muted)
             tabLabels[i].setTypeface(
                 null, if (selected) Typeface.BOLD else Typeface.NORMAL
