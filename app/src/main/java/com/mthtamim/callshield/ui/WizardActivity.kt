@@ -59,11 +59,13 @@ class WizardActivity : BaseActivity() {
     private lateinit var btnAction: Button
     private lateinit var btnContinue: Button
     private var pendingGrant: Grant? = null
-    private var lastAttemptedGrant: Grant? = null
+    private val deferredGrants = mutableSetOf<Grant>()
 
     private val requestPermission =
         registerForActivityResult(ActivityResultContracts.RequestPermission()) { granted ->
-            lastAttemptedGrant = if (granted) null else pendingGrant
+            pendingGrant?.let { grant ->
+                if (granted) deferredGrants.remove(grant) else deferredGrants.add(grant)
+            }
             pendingGrant = null
             refreshSetup()
         }
@@ -71,7 +73,9 @@ class WizardActivity : BaseActivity() {
     private val requestRole =
         registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
             val grant = pendingGrant
-            lastAttemptedGrant = if (grant != null && !statusFor(grant)) grant else null
+            if (grant != null) {
+                if (statusFor(grant)) deferredGrants.remove(grant) else deferredGrants.add(grant)
+            }
             pendingGrant = null
             refreshSetup()
         }
@@ -194,13 +198,8 @@ class WizardActivity : BaseActivity() {
 
     private fun grantNextRequired() {
         val missing = requiredAccess.filterNot { statusFor(it.grant) }
-        val next = if (lastAttemptedGrant == null) {
-            missing.firstOrNull()
-        } else {
-            val lastIndex = requiredAccess.indexOfFirst { it.grant == lastAttemptedGrant }
-            (requiredAccess.drop(lastIndex + 1) + requiredAccess.take(lastIndex + 1))
-                .firstOrNull { !statusFor(it.grant) }
-        } ?: run {
+        val next = missing.firstOrNull { it.grant !in deferredGrants }
+            ?: missing.firstOrNull() ?: run {
             refreshSetup()
             return
         }
@@ -211,7 +210,7 @@ class WizardActivity : BaseActivity() {
                     pendingGrant = next.grant
                     requestRole.launch(intent)
                 } else {
-                    lastAttemptedGrant = next.grant
+                    deferredGrants.add(next.grant)
                     refreshSetup()
                 }
             }
@@ -245,7 +244,7 @@ class WizardActivity : BaseActivity() {
         try {
             startActivity(intentProvider())
         } catch (_: ActivityNotFoundException) {
-            lastAttemptedGrant = grant
+            deferredGrants.add(grant)
             pendingGrant = null
             refreshSetup()
         }
@@ -259,7 +258,7 @@ class WizardActivity : BaseActivity() {
         if (::requiredContainer.isInitialized) {
             val grant = pendingGrant
             if (grant != null) {
-                lastAttemptedGrant = if (statusFor(grant)) null else grant
+                if (statusFor(grant)) deferredGrants.remove(grant) else deferredGrants.add(grant)
                 pendingGrant = null
             }
             refreshSetup()
