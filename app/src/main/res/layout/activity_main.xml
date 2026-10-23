@@ -1501,7 +1501,9 @@
                 android:layout_width="26dp"
                 android:layout_height="26dp"
                 android:contentDescription="@string/tab_dashboard"
-                android:src="@drawable/ic_home" android:background="?android:attr/selectableItemBackground"\n            />
+                android:src="@drawable/ic_home"
+                android:background="?android:attr/selectableItemBackground"
+                />
 
             <TextView
                 android:id="@+id/labelDashboard"
@@ -1534,7 +1536,9 @@
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:contentDescription="@string/tab_filtering"
-                android:src="@drawable/ic_filter" android:background="?android:attr/selectableItemBackground"\n            />
+                android:src="@drawable/ic_filter"
+                android:background="?android:attr/selectableItemBackground"
+                />
 
             <TextView
                 android:id="@+id/labelFiltering"
@@ -1567,7 +1571,9 @@
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:contentDescription="@string/smart_title"
-                android:src="@drawable/ic_clock" android:background="?android:attr/selectableItemBackground"\n            />
+                android:src="@drawable/ic_clock"
+                android:background="?android:attr/selectableItemBackground"
+                />
 
             <TextView
                 android:id="@+id/labelSmart"
@@ -1600,7 +1606,9 @@
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:contentDescription="@string/tab_log"
-                android:src="@drawable/ic_list" android:background="?android:attr/selectableItemBackground"\n            />
+                android:src="@drawable/ic_list"
+                android:background="?android:attr/selectableItemBackground"
+                />
 
             <TextView
                 android:id="@+id/labelLog"
@@ -1633,7 +1641,9 @@
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:contentDescription="@string/nav_settings"
-                android:src="@drawable/ic_gear" android:background="?android:attr/selectableItemBackground"\n            />
+                android:src="@drawable/ic_gear"
+                android:background="?android:attr/selectableItemBackground"
+                />
 
             <TextView
                 android:id="@+id/labelSettings"
