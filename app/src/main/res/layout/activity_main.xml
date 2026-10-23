@@ -156,9 +156,8 @@
                         android:layout_marginTop="4dp" />
                 </LinearLayout>
 
-                <!-- Stat tiles: three tinted-icon tiles. The Blocked
-                     today number lives here (textBlockedToday), so it
-                     never appears twice on this page. -->
+                <!-- Dashboard metrics: paired compact tiles, with the latest blocked
+                     caller promoted to a full-width activity card for readability. -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -168,13 +167,14 @@
                     <LinearLayout
                         style="@style/CS.StatTile"
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:orientation="vertical">
+                        android:orientation="vertical"
+                        android:minHeight="118dp">
 
                         <ImageView
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
                             android:contentDescription="@string/dash_blocked_today_label"
                             android:src="@drawable/ic_block"
                             android:tint="@color/cs_red" />
@@ -184,30 +184,31 @@
                             style="@style/CS.Body"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="6dp"
+                            android:layout_marginTop="12dp"
                             android:textColor="@color/cs_red"
-                            android:textSize="20sp"
+                            android:textSize="24sp"
                             android:textStyle="bold" />
 
                         <TextView
                             style="@style/CS.Caption"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="2dp"
+                            android:layout_marginTop="3dp"
                             android:text="@string/dash_blocked_today_label" />
                     </LinearLayout>
 
                     <LinearLayout
                         style="@style/CS.StatTile"
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="10dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="12dp"
                         android:layout_weight="1"
-                        android:orientation="vertical">
+                        android:orientation="vertical"
+                        android:minHeight="118dp">
 
                         <ImageView
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
                             android:contentDescription="@string/dash_blocked_week_label"
                             android:src="@drawable/ic_warning"
                             android:tint="@color/cs_amber" />
@@ -217,57 +218,67 @@
                             style="@style/CS.Body"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="6dp"
+                            android:layout_marginTop="12dp"
                             android:textColor="@color/cs_amber"
-                            android:textSize="20sp"
+                            android:textSize="24sp"
                             android:textStyle="bold" />
 
                         <TextView
                             style="@style/CS.Caption"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="2dp"
+                            android:layout_marginTop="3dp"
                             android:text="@string/dash_blocked_week_label" />
                     </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/CS.Card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="42dp"
+                        android:layout_height="42dp"
+                        android:padding="9dp"
+                        android:background="@drawable/bg_nav_selected"
+                        android:contentDescription="@string/dash_last_blocked_label"
+                        android:src="@drawable/ic_check_circle"
+                        android:tint="@color/cs_accent_dark" />
 
                     <LinearLayout
-                        style="@style/CS.StatTile"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="10dp"
+                        android:layout_marginStart="12dp"
                         android:layout_weight="1"
                         android:orientation="vertical">
 
-                        <ImageView
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
-                            android:contentDescription="@string/dash_last_blocked_label"
-                            android:src="@drawable/ic_check_circle"
-                            android:tint="@color/cs_accent_dark" />
+                        <TextView
+                            style="@style/CS.Caption"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/dash_last_blocked_label" />
 
                         <TextView
                             android:id="@+id/textLastBlocked"
                             style="@style/CS.Body"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="6dp"
+                            android:layout_marginTop="3dp"
                             android:ellipsize="end"
                             android:maxLines="1"
                             android:textColor="@color/cs_accent_dark"
                             android:textStyle="bold" />
 
                         <TextView
-                            style="@style/CS.Caption"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="2dp"
-                            android:text="@string/dash_last_blocked_label" />
-
-                        <TextView
                             android:id="@+id/textLastBlockedTime"
                             style="@style/CS.Caption"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content" />
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp" />
                     </LinearLayout>
                 </LinearLayout>
 
