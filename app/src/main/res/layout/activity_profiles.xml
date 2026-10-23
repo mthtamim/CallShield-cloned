@@ -8,20 +8,20 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="16dp">
+        android:padding="20dp">
 
         <TextView
             style="@style/CS.Heading"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/profiles_title"
-            android:textSize="20sp" />
+            android:textSize="24sp" />
 
         <LinearLayout
             style="@style/CS.Card"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="14dp"
+            android:layout_marginTop="18dp"
             android:orientation="vertical">
 
             <TextView
