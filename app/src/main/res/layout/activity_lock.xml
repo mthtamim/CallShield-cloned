@@ -3,54 +3,62 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/cs_bg"
-    android:gravity="center_horizontal"
+    android:gravity="center"
     android:orientation="vertical"
     android:padding="24dp">
 
-    <TextView
-        style="@style/CS.Heading"
+    <LinearLayout
+        style="@style/CS.Card"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
-        android:text="@string/lock_title"
-        android:textSize="22sp" />
+        android:orientation="vertical"
+        android:padding="24dp">
 
-    <TextView
-        style="@style/CS.Caption"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="6dp"
-        android:text="@string/lock_desc" />
+        <TextView
+            style="@style/CS.Heading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/lock_title"
+            android:textSize="25sp" />
 
-    <EditText
-        android:id="@+id/editPin"
-        style="@style/CS.Body"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:hint="@string/pin_hint"
-        android:inputType="numberPassword" />
+        <TextView
+            style="@style/CS.Caption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/lock_desc" />
 
-    <Button
-        android:id="@+id/btnUnlock"
-        style="@style/CS.Button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="@string/lock_unlock" />
+        <EditText
+            android:id="@+id/editPin"
+            style="@style/CS.Input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:hint="@string/pin_hint"
+            android:inputType="numberPassword"
+            android:importantForAutofill="no" />
 
-    <Button
-        android:id="@+id/btnBiometric"
-        style="@style/CS.ButtonSecondary"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="@string/lock_biometric" />
+        <Button
+            android:id="@+id/btnUnlock"
+            style="@style/CS.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/lock_unlock" />
 
-    <TextView
-        android:id="@+id/textLockError"
-        style="@style/CS.Caption"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp" />
+        <Button
+            android:id="@+id/btnBiometric"
+            style="@style/CS.ButtonSecondary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/lock_biometric" />
+
+        <TextView
+            android:id="@+id/textLockError"
+            style="@style/CS.Caption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp" />
+    </LinearLayout>
 </LinearLayout>
