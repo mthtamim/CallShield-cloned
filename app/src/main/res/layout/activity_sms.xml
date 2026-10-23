@@ -98,7 +98,7 @@
                 android:paddingTop="12dp"
                 android:paddingBottom="12dp"
                 android:id="@+id/editKeyword"
-                style="@style/CS.Body"
+                style="@style/CS.Input"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="6dp"
