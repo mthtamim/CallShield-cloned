@@ -1482,7 +1482,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="76dp"
+        android:layout_height="82dp"
         android:background="@color/cs_bottombar"
         android:orientation="horizontal"
         android:paddingTop="8dp"
@@ -1502,7 +1502,6 @@
                 android:layout_height="26dp"
                 android:contentDescription="@string/tab_dashboard"
                 android:src="@drawable/ic_home"
-                android:background="?android:attr/selectableItemBackground"
                 />
 
             <TextView
@@ -1537,7 +1536,6 @@
                 android:layout_height="24dp"
                 android:contentDescription="@string/tab_filtering"
                 android:src="@drawable/ic_filter"
-                android:background="?android:attr/selectableItemBackground"
                 />
 
             <TextView
@@ -1572,7 +1570,6 @@
                 android:layout_height="24dp"
                 android:contentDescription="@string/smart_title"
                 android:src="@drawable/ic_clock"
-                android:background="?android:attr/selectableItemBackground"
                 />
 
             <TextView
@@ -1607,7 +1604,6 @@
                 android:layout_height="24dp"
                 android:contentDescription="@string/tab_log"
                 android:src="@drawable/ic_list"
-                android:background="?android:attr/selectableItemBackground"
                 />
 
             <TextView
@@ -1642,7 +1638,6 @@
                 android:layout_height="24dp"
                 android:contentDescription="@string/nav_settings"
                 android:src="@drawable/ic_gear"
-                android:background="?android:attr/selectableItemBackground"
                 />
 
             <TextView
