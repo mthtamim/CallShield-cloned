@@ -2,13 +2,15 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/cs_bg">
+    android:background="@color/cs_bg"
+    android:fillViewport="true"
+    android:clipToPadding="false">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="20dp">
+        android:padding="24dp">
 
         <TextView
             style="@style/CS.Heading"
@@ -21,7 +23,7 @@
             style="@style/CS.Card"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="18dp"
+            android:layout_marginTop="20dp"
             android:orientation="vertical">
 
             <TextView
@@ -85,7 +87,7 @@
             style="@style/CS.Card"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="16dp"
             android:orientation="vertical">
 
             <TextView
@@ -102,6 +104,7 @@
                 android:text="@string/edit_profile_desc" />
 
             <Spinner
+                style="@style/CS.Spinner"
                 android:id="@+id/spinnerEditProfile"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -215,7 +218,7 @@
                 style="@style/CS.Button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
+                android:layout_marginTop="16dp"
                 android:text="@string/save" />
         </LinearLayout>
 
@@ -223,7 +226,7 @@
             style="@style/CS.Card"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="16dp"
             android:orientation="vertical">
 
             <TextView
@@ -247,6 +250,7 @@
                 android:orientation="vertical" />
 
             <Spinner
+                style="@style/CS.Spinner"
                 android:id="@+id/spinnerScheduleProfile"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -259,8 +263,14 @@
                 android:orientation="horizontal">
 
                 <EditText
+                android:background="@drawable/bg_input"
+                android:minHeight="52dp"
+                android:paddingLeft="14dp"
+                android:paddingRight="14dp"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp"
                     android:id="@+id/editSchedStart"
-                    style="@style/CS.Body"
+                    style="@style/CS.Input"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -268,8 +278,14 @@
                     android:inputType="time" />
 
                 <EditText
+                android:background="@drawable/bg_input"
+                android:minHeight="52dp"
+                android:paddingLeft="14dp"
+                android:paddingRight="14dp"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp"
                     android:id="@+id/editSchedEnd"
-                    style="@style/CS.Body"
+                    style="@style/CS.Input"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
@@ -347,7 +363,7 @@
             style="@style/CS.Card"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="16dp"
             android:orientation="vertical">
 
             <TextView
@@ -399,7 +415,7 @@
             style="@style/CS.Card"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="16dp"
             android:orientation="vertical">
 
             <TextView
@@ -427,7 +443,7 @@
             style="@style/CS.Card"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="16dp"
             android:orientation="vertical">
 
             <TextView
@@ -463,6 +479,7 @@
             </LinearLayout>
 
             <Spinner
+                style="@style/CS.Spinner"
                 android:id="@+id/spinnerCalendar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

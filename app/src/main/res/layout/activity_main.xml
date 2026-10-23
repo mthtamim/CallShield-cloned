@@ -24,7 +24,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:padding="20dp">
+                android:padding="22dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -60,7 +60,7 @@
                     android:layout_marginTop="20dp"
                     android:background="@drawable/bg_hero"
                     android:orientation="vertical"
-                    android:padding="20dp">
+                    android:padding="22dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -104,7 +104,7 @@
                         style="@style/CS.Body"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="12dp"
+                        android:layout_marginTop="16dp"
                         android:text="@string/master_switch" />
 
                     <TextView
@@ -135,7 +135,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
+                    android:layout_marginTop="16dp"
                     android:orientation="horizontal">
 
                     <LinearLayout
@@ -250,7 +250,7 @@
                     style="@style/CS.Card"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
+                    android:layout_marginTop="16dp"
                     android:orientation="vertical">
 
                     <TextView
@@ -315,7 +315,7 @@
                     style="@style/CS.Card"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
+                    android:layout_marginTop="16dp"
                     android:orientation="vertical">
 
                     <TextView
@@ -346,7 +346,7 @@
                     style="@style/CS.Card"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
+                    android:layout_marginTop="16dp"
                     android:orientation="vertical">
 
                     <TextView
@@ -453,7 +453,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:padding="20dp">
+                android:padding="22dp">
 
                 <TextView
                     style="@style/CS.Heading"
@@ -473,7 +473,7 @@
                     style="@style/CS.CardMenu"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="18dp"
+                    android:layout_marginTop="20dp"
                     android:orientation="vertical">
                     <LinearLayout
                         android:id="@+id/btnLists"
@@ -669,7 +669,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:padding="20dp">
+                android:padding="22dp">
 
                 <TextView
                     style="@style/CS.Heading"
@@ -682,7 +682,7 @@
                     style="@style/CS.Card"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="18dp"
+                    android:layout_marginTop="20dp"
                     android:orientation="vertical">
 
                     <TextView
@@ -744,7 +744,7 @@
                     style="@style/CS.Card"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
+                    android:layout_marginTop="16dp"
                     android:orientation="vertical">
 
                     <Switch
@@ -766,7 +766,7 @@
                     style="@style/CS.Card"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
+                    android:layout_marginTop="16dp"
                     android:orientation="vertical">
 
                     <TextView
@@ -783,8 +783,14 @@
                         android:text="@string/expected_desc" />
 
                     <EditText
+                android:background="@drawable/bg_input"
+                android:minHeight="52dp"
+                android:paddingLeft="14dp"
+                android:paddingRight="14dp"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp"
                         android:id="@+id/editExpected"
-                        style="@style/CS.Body"
+                        style="@style/CS.Input"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
@@ -827,7 +833,7 @@
                     style="@style/CS.Card"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
+                    android:layout_marginTop="16dp"
                     android:orientation="vertical">
 
                     <TextView
@@ -844,6 +850,7 @@
                         android:text="@string/callback_desc" />
 
                     <Spinner
+                style="@style/CS.Spinner"
                         android:id="@+id/spinnerCallback"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -854,7 +861,7 @@
                     style="@style/CS.Card"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
+                    android:layout_marginTop="16dp"
                     android:orientation="vertical">
 
                     <Switch
@@ -879,6 +886,7 @@
                         android:text="@string/repeat_count_label" />
 
                     <Spinner
+                style="@style/CS.Spinner"
                         android:id="@+id/spinnerRepeatCount"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content" />
@@ -891,6 +899,7 @@
                         android:text="@string/repeat_window_label" />
 
                     <Spinner
+                style="@style/CS.Spinner"
                         android:id="@+id/spinnerRepeatWindow"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content" />
@@ -900,7 +909,7 @@
                     style="@style/CS.Card"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
+                    android:layout_marginTop="16dp"
                     android:orientation="vertical">
 
                     <TextView
@@ -936,8 +945,14 @@
                     </LinearLayout>
 
                     <EditText
+                android:background="@drawable/bg_input"
+                android:minHeight="52dp"
+                android:paddingLeft="14dp"
+                android:paddingRight="14dp"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp"
                         android:id="@+id/editAutoSmsText"
-                        style="@style/CS.Body"
+                        style="@style/CS.Input"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
@@ -957,7 +972,7 @@
                     style="@style/CS.Card"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
+                    android:layout_marginTop="16dp"
                     android:orientation="vertical">
 
                     <TextView
@@ -998,7 +1013,7 @@
                     style="@style/CS.Button"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="18dp"
+                    android:layout_marginTop="20dp"
                     android:text="@string/save" />
             </LinearLayout>
         </ScrollView>
@@ -1009,7 +1024,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:padding="20dp"
+            android:padding="22dp"
             android:visibility="gone">
 
             <TextView
@@ -1027,8 +1042,14 @@
                 android:text="@string/log_hint" />
 
             <EditText
+                android:background="@drawable/bg_input"
+                android:minHeight="52dp"
+                android:paddingLeft="14dp"
+                android:paddingRight="14dp"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp"
                 android:id="@+id/editLogSearch"
-                style="@style/CS.Body"
+                style="@style/CS.Input"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -1041,6 +1062,7 @@
                 android:orientation="horizontal">
 
                 <Spinner
+                style="@style/CS.Spinner"
                     android:id="@+id/spinnerLogFilter"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -1091,7 +1113,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:padding="20dp">
+                android:padding="22dp">
 
                 <TextView
                     style="@style/CS.Heading"
@@ -1104,7 +1126,7 @@
                     style="@style/CS.CardMenu"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="18dp"
+                    android:layout_marginTop="20dp"
                     android:orientation="vertical">
                     <LinearLayout
                         android:id="@+id/btnStats"
@@ -1482,8 +1504,10 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="76dp"
+        android:layout_height="82dp"
         android:background="@color/cs_bottombar"
+        android:paddingStart="6dp"
+        android:paddingEnd="6dp"
         android:orientation="horizontal"
         android:paddingTop="8dp"
         android:paddingBottom="8dp">
@@ -1502,7 +1526,6 @@
                 android:layout_height="26dp"
                 android:contentDescription="@string/tab_dashboard"
                 android:src="@drawable/ic_home"
-                android:background="?android:attr/selectableItemBackground"
                 />
 
             <TextView
@@ -1537,7 +1560,6 @@
                 android:layout_height="24dp"
                 android:contentDescription="@string/tab_filtering"
                 android:src="@drawable/ic_filter"
-                android:background="?android:attr/selectableItemBackground"
                 />
 
             <TextView
@@ -1572,7 +1594,6 @@
                 android:layout_height="24dp"
                 android:contentDescription="@string/smart_title"
                 android:src="@drawable/ic_clock"
-                android:background="?android:attr/selectableItemBackground"
                 />
 
             <TextView
@@ -1607,7 +1628,6 @@
                 android:layout_height="24dp"
                 android:contentDescription="@string/tab_log"
                 android:src="@drawable/ic_list"
-                android:background="?android:attr/selectableItemBackground"
                 />
 
             <TextView
@@ -1642,7 +1662,6 @@
                 android:layout_height="24dp"
                 android:contentDescription="@string/nav_settings"
                 android:src="@drawable/ic_gear"
-                android:background="?android:attr/selectableItemBackground"
                 />
 
             <TextView

@@ -4,44 +4,72 @@
     android:layout_height="match_parent"
     android:background="@color/cs_bg"
     android:orientation="vertical"
-    android:padding="20dp">
+    android:paddingStart="20dp"
+    android:paddingEnd="20dp"
+    android:paddingTop="24dp"
+    android:paddingBottom="16dp">
 
     <TextView
         style="@style/CS.Heading"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/lists_title"
-        android:textSize="24sp" />
+        android:textSize="26sp" />
 
-    <Spinner
-        android:id="@+id/spinnerListType"
+    <LinearLayout
+        style="@style/CS.Card"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp" />
+        android:layout_marginTop="16dp"
+        android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/textListHint"
-        style="@style/CS.Caption"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="6dp" />
+        <TextView
+            style="@style/CS.Caption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/menu_desc_lists" />
 
-    <ListView
-        android:id="@+id/listItems"
+        <Spinner
+            android:id="@+id/spinnerListType"
+            style="@style/CS.Spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp" />
+
+        <TextView
+            android:id="@+id/textListHint"
+            style="@style/CS.Caption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp" />
+    </LinearLayout>
+
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="8dp"
-        android:layout_weight="1"
-        android:divider="@android:color/transparent"
-        android:dividerHeight="8dp" />
+        android:layout_marginTop="12dp"
+        android:layout_weight="1">
 
-    <TextView
-        android:id="@+id/textEmptyList"
-        style="@style/CS.Caption"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/empty_list"
-        android:visibility="gone" />
+        <ListView
+            android:id="@+id/listItems"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:paddingBottom="6dp"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="8dp" />
+
+        <TextView
+            android:id="@+id/textEmptyList"
+            style="@style/CS.Caption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="24dp"
+            android:text="@string/empty_list"
+            android:visibility="gone" />
+    </FrameLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -49,9 +77,6 @@
         android:layout_marginTop="10dp"
         android:orientation="horizontal">
 
-        <!-- v1.2.0: Add is the tinted outline button (tinted per
-             section at runtime, like the reference design); Pick
-             contact is the filled primary. -->
         <Button
             android:id="@+id/btnAddManual"
             style="@style/CS.ButtonSecondary"
@@ -65,7 +90,7 @@
             style="@style/CS.Button"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
+            android:layout_marginStart="10dp"
             android:layout_weight="1"
             android:text="@string/pick_contact" />
     </LinearLayout>

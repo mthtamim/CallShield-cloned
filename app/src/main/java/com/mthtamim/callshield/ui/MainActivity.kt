@@ -198,8 +198,9 @@ class MainActivity : BaseActivity() {
         // Feature 57 (v1.1): the log auto-clean sweep also runs on app start.
         store().purgeOldLog(System.currentTimeMillis())
 
-        // First run: go through the setup wizard once (feature 42).
-        if (!store().wizardDone()) {
+        // First run: open the unified setup checklist once. The saved-state
+        // guard prevents configuration changes from stacking duplicate setup screens.
+        if (!store().wizardDone() && savedInstanceState == null) {
             startActivity(Intent(this, WizardActivity::class.java))
         }
 
@@ -355,6 +356,11 @@ class MainActivity : BaseActivity() {
         val muted = getColor(R.color.cs_text_secondary)
         for (i in tabLabels.indices) {
             val selected = i == page
+            // Give the whole destination a rounded active surface and a full
+            // touch target; do not rely on a tiny ripple over the icon only.
+            tabItems[i].setBackgroundResource(
+                if (selected) R.drawable.bg_nav_selected else R.drawable.bg_nav_ripple
+            )
             tabLabels[i].setTextColor(if (selected) accent else muted)
             tabLabels[i].setTypeface(
                 null, if (selected) Typeface.BOLD else Typeface.NORMAL

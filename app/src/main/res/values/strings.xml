@@ -493,4 +493,17 @@
     <string name="hero_off">Shield off</string>
     <string name="pill_on">ON</string>
     <string name="pill_off">OFF</string>
+
+    <string name="wizard_setup_title">Make CallShield ready</string>
+    <string name="wizard_setup_body">Review the access CallShield uses to screen calls. Required access is grouped in one checklist; Android will show its own secure prompt or Settings page only when needed. You can continue now and finish later from Settings.</string>
+    <string name="wizard_setup_progress">%1$d of %2$d required access items ready</string>
+    <string name="wizard_setup_required">Essential setup</string>
+    <string name="wizard_setup_optional">Optional features</string>
+    <string name="wizard_setup_optional_body">These are only needed if you turn on the related features. They will not be requested during first-run setup.</string>
+    <string name="wizard_setup_complete">Essential setup is complete. CallShield is ready to protect calls.</string>
+    <string name="wizard_setup_remaining">%1$d essential access item(s) still need attention.</string>
+    <string name="wizard_setup_next">Grant next access</string>
+    <string name="wizard_setup_ready">Essential setup complete</string>
+    <string name="wizard_setup_continue">Continue to CallShield</string>
+
 </resources>

@@ -493,4 +493,17 @@
     <string name="hero_off">শিল্ড বন্ধ</string>
     <string name="pill_on">চালু</string>
     <string name="pill_off">বন্ধ</string>
+
+    <string name="wizard_setup_title">CallShield প্রস্তুত করুন</string>
+    <string name="wizard_setup_body">কল স্ক্রিন করতে CallShield-এর যে অনুমতিগুলো দরকার, সেগুলো এখানে এক তালিকায় দেখুন। প্রয়োজনীয় অনুমতিগুলো একই চেকলিস্টে সাজানো আছে। দরকার হলে Android-এর নিরাপদ সিস্টেম প্রম্পট বা Settings খুলবে। চাইলে এখন অ্যাপে যেতে পারেন, পরে Settings থেকে বাকি কাজ শেষ করতে পারবেন।</string>
+    <string name="wizard_setup_progress">%2$dটির মধ্যে %1$dটি প্রয়োজনীয় অনুমতি প্রস্তুত</string>
+    <string name="wizard_setup_required">প্রয়োজনীয় সেটআপ</string>
+    <string name="wizard_setup_optional">ঐচ্ছিক ফিচার</string>
+    <string name="wizard_setup_optional_body">সংশ্লিষ্ট ফিচার চালু করলেই শুধু এই অনুমতিগুলো দরকার হবে। প্রথমবার অ্যাপ চালুর সময় এগুলো চাওয়া হবে না।</string>
+    <string name="wizard_setup_complete">প্রয়োজনীয় সেটআপ সম্পন্ন। CallShield এখন কল সুরক্ষার জন্য প্রস্তুত।</string>
+    <string name="wizard_setup_remaining">আরও %1$dটি প্রয়োজনীয় অনুমতি সম্পন্ন করতে হবে।</string>
+    <string name="wizard_setup_next">পরের অনুমতি দিন</string>
+    <string name="wizard_setup_ready">প্রয়োজনীয় সেটআপ সম্পন্ন</string>
+    <string name="wizard_setup_continue">CallShield-এ প্রবেশ করুন</string>
+
 </resources>
