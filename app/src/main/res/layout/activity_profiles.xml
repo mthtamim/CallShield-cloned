@@ -104,6 +104,7 @@
                 android:text="@string/edit_profile_desc" />
 
             <Spinner
+                style="@style/CS.Spinner"
                 android:id="@+id/spinnerEditProfile"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -249,6 +250,7 @@
                 android:orientation="vertical" />
 
             <Spinner
+                style="@style/CS.Spinner"
                 android:id="@+id/spinnerScheduleProfile"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -261,6 +263,12 @@
                 android:orientation="horizontal">
 
                 <EditText
+                android:background="@drawable/bg_input"
+                android:minHeight="52dp"
+                android:paddingLeft="14dp"
+                android:paddingRight="14dp"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp"
                     android:id="@+id/editSchedStart"
                     style="@style/CS.Body"
                     android:layout_width="0dp"
@@ -270,6 +278,12 @@
                     android:inputType="time" />
 
                 <EditText
+                android:background="@drawable/bg_input"
+                android:minHeight="52dp"
+                android:paddingLeft="14dp"
+                android:paddingRight="14dp"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp"
                     android:id="@+id/editSchedEnd"
                     style="@style/CS.Body"
                     android:layout_width="0dp"
@@ -465,6 +479,7 @@
             </LinearLayout>
 
             <Spinner
+                style="@style/CS.Spinner"
                 android:id="@+id/spinnerCalendar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
