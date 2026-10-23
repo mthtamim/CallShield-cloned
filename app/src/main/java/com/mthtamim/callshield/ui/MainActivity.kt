@@ -198,8 +198,9 @@ class MainActivity : BaseActivity() {
         // Feature 57 (v1.1): the log auto-clean sweep also runs on app start.
         store().purgeOldLog(System.currentTimeMillis())
 
-        // First run: go through the setup wizard once (feature 42).
-        if (!store().wizardDone()) {
+        // First run: open the unified setup checklist once. The saved-state
+        // guard prevents configuration changes from stacking duplicate setup screens.
+        if (!store().wizardDone() && savedInstanceState == null) {
             startActivity(Intent(this, WizardActivity::class.java))
         }
 
