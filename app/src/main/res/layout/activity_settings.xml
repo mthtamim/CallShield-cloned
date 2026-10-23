@@ -8,20 +8,20 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="16dp">
+        android:padding="20dp">
 
         <TextView
             style="@style/CS.Heading"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/settings_title"
-            android:textSize="20sp" />
+            android:textSize="24sp" />
 
         <LinearLayout
             style="@style/CS.Card"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="14dp"
+            android:layout_marginTop="18dp"
             android:orientation="vertical">
 
             <TextView
@@ -232,7 +232,7 @@
                 style="@style/CS.Heading"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="14dp"
+                android:layout_marginTop="18dp"
                 android:text="@string/theme_label" />
 
             <RadioGroup
@@ -269,7 +269,7 @@
             style="@style/CS.Button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="14dp"
+            android:layout_marginTop="18dp"
             android:text="@string/save" />
     </LinearLayout>
 </ScrollView>
