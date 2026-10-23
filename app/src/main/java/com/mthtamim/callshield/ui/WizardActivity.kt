@@ -58,14 +58,21 @@ class WizardActivity : BaseActivity() {
     private lateinit var optionalContainer: LinearLayout
     private lateinit var btnAction: Button
     private lateinit var btnContinue: Button
+    private var pendingGrant: Grant? = null
+    private var lastAttemptedGrant: Grant? = null
 
     private val requestPermission =
-        registerForActivityResult(ActivityResultContracts.RequestPermission()) {
+        registerForActivityResult(ActivityResultContracts.RequestPermission()) { granted ->
+            lastAttemptedGrant = if (granted) null else pendingGrant
+            pendingGrant = null
             refreshSetup()
         }
 
     private val requestRole =
         registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
+            val grant = pendingGrant
+            lastAttemptedGrant = if (grant != null && !statusFor(grant)) grant else null
+            pendingGrant = null
             refreshSetup()
         }
 
@@ -186,27 +193,40 @@ class WizardActivity : BaseActivity() {
     }
 
     private fun grantNextRequired() {
-        val next = requiredAccess.firstOrNull { !statusFor(it.grant) } ?: run {
+        val missing = requiredAccess.filterNot { statusFor(it.grant) }
+        val next = if (lastAttemptedGrant == null) {
+            missing.firstOrNull()
+        } else {
+            val lastIndex = requiredAccess.indexOfFirst { it.grant == lastAttemptedGrant }
+            (requiredAccess.drop(lastIndex + 1) + requiredAccess.take(lastIndex + 1))
+                .firstOrNull { !statusFor(it.grant) }
+        } ?: run {
             refreshSetup()
             return
         }
         when (next.grant) {
             Grant.ROLE -> {
                 val intent = Perms.roleRequestIntent(this)
-                if (intent != null) requestRole.launch(intent) else refreshSetup()
+                if (intent != null) {
+                    pendingGrant = next.grant
+                    requestRole.launch(intent)
+                } else {
+                    lastAttemptedGrant = next.grant
+                    refreshSetup()
+                }
             }
-            Grant.CONTACTS -> requestPermission.launch(Manifest.permission.READ_CONTACTS)
-            Grant.CALL_LOG -> requestPermission.launch(Manifest.permission.READ_CALL_LOG)
+            Grant.CONTACTS -> launchPermission(next.grant, Manifest.permission.READ_CONTACTS)
+            Grant.CALL_LOG -> launchPermission(next.grant, Manifest.permission.READ_CALL_LOG)
             Grant.NOTIFICATIONS -> {
                 if (Build.VERSION.SDK_INT >= 33) {
-                    requestPermission.launch(Manifest.permission.POST_NOTIFICATIONS)
+                    launchPermission(next.grant, Manifest.permission.POST_NOTIFICATIONS)
                 } else refreshSetup()
             }
-            Grant.NOTIFICATION_ACCESS -> openSystemScreen { Perms.notificationAccessIntent() }
-            Grant.BATTERY -> openSystemScreen { Perms.batteryRequestIntent(this) }
+            Grant.NOTIFICATION_ACCESS -> openSystemScreen(next.grant) { Perms.notificationAccessIntent() }
+            Grant.BATTERY -> openSystemScreen(next.grant) { Perms.batteryRequestIntent(this) }
             Grant.EXACT_ALARM -> {
                 if (Build.VERSION.SDK_INT >= 31) {
-                    openSystemScreen { Perms.exactAlarmIntent(this) }
+                    openSystemScreen(next.grant) { Perms.exactAlarmIntent(this) }
                 } else refreshSetup()
             }
             // Optional grants are intentionally not auto-requested during
@@ -215,10 +235,18 @@ class WizardActivity : BaseActivity() {
         }
     }
 
-    private fun openSystemScreen(intentProvider: () -> android.content.Intent) {
+    private fun launchPermission(grant: Grant, permission: String) {
+        pendingGrant = grant
+        requestPermission.launch(permission)
+    }
+
+    private fun openSystemScreen(grant: Grant, intentProvider: () -> android.content.Intent) {
+        pendingGrant = grant
         try {
             startActivity(intentProvider())
         } catch (_: ActivityNotFoundException) {
+            lastAttemptedGrant = grant
+            pendingGrant = null
             refreshSetup()
         }
     }
@@ -228,6 +256,13 @@ class WizardActivity : BaseActivity() {
 
     override fun onResume() {
         super.onResume()
-        if (::requiredContainer.isInitialized) refreshSetup()
+        if (::requiredContainer.isInitialized) {
+            val grant = pendingGrant
+            if (grant != null) {
+                lastAttemptedGrant = if (statusFor(grant)) null else grant
+                pendingGrant = null
+            }
+            refreshSetup()
+        }
     }
 }
