@@ -24,35 +24,62 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:padding="22dp">
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:paddingTop="22dp"
+                android:paddingBottom="24dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
                     android:orientation="horizontal">
 
-                    <TextView
-                        style="@style/CS.Heading"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/hero_call"
-                        android:textSize="24sp" />
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:padding="9dp"
+                        android:background="@drawable/bg_nav_selected"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/ic_shield_ring"
+                        android:tint="@color/cs_accent_dark" />
 
-                    <TextView
-                        style="@style/CS.Heading"
-                        android:layout_width="wrap_content"
+                    <LinearLayout
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="@string/hero_shield"
-                        android:textColor="@color/cs_accent_dark"
-                        android:textSize="24sp" />
+                        android:layout_marginStart="12dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/CS.Heading"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/hero_call"
+                                android:textSize="27sp" />
+
+                            <TextView
+                                style="@style/CS.Heading"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/hero_shield"
+                                android:textColor="@color/cs_accent_dark"
+                                android:textSize="27sp" />
+                        </LinearLayout>
+
+                        <TextView
+                            style="@style/CS.Caption"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:text="@string/tagline" />
+                    </LinearLayout>
                 </LinearLayout>
-
-                <TextView
-                    style="@style/CS.Caption"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:text="@string/tagline" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -1504,13 +1531,14 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="82dp"
-        android:background="@color/cs_bottombar"
+        android:layout_height="88dp"
+        android:background="@drawable/bg_nav_dock"
+        android:elevation="12dp"
         android:paddingStart="6dp"
         android:paddingEnd="6dp"
         android:orientation="horizontal"
-        android:paddingTop="8dp"
-        android:paddingBottom="8dp">
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
 
         <LinearLayout
             android:id="@+id/tabDashboard"
