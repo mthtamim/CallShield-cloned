@@ -1,37 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- v1.2.0 design tokens — DARK theme (the reference look): deep navy
-     surfaces, emerald accent, coloured icon tiles. Names mirror
-     values/colors.xml exactly. -->
+<!-- CallShield visual system: deep obsidian surfaces with luminous indigo and teal. -->
 <resources>
-    <color name="cs_bg">#0A1120</color>
-    <color name="cs_card">#131C2E</color>
-    <color name="cs_text">#EEF2F8</color>
-    <color name="cs_text_body">#C9D4E4</color>
-    <color name="cs_text_secondary">#8B98AD</color>
-    <color name="cs_accent">#22C55E</color>
-    <color name="cs_accent_dark">#22C55E</color>
-    <color name="cs_on_accent">#06251A</color>
-    <color name="cs_danger">#F4536E</color>
-    <color name="cs_warning">#F5B942</color>
-    <color name="cs_divider">#1E2A44</color>
-    <color name="cs_bottombar">#0D1526</color>
-    <color name="cs_bottombar_divider">#1A2740</color>
+    <color name="cs_bg">#080B14</color>
+    <color name="cs_card">#111827</color>
+    <color name="cs_text">#F4F6FF</color>
+    <color name="cs_text_body">#D0D7E8</color>
+    <color name="cs_text_secondary">#929CB4</color>
+    <color name="cs_accent">#8588FF</color>
+    <color name="cs_accent_dark">#A5A8FF</color>
+    <color name="cs_on_accent">#0B0D1A</color>
+    <color name="cs_danger">#FF5B78</color>
+    <color name="cs_warning">#FFC46B</color>
+    <color name="cs_divider">#252D40</color>
+    <color name="cs_bottombar">#0D1220</color>
+    <color name="cs_bottombar_divider">#252D40</color>
 
-    <!-- Coloured icon-tile system (icon colour + its tinted tile). -->
-    <color name="cs_red">#F4536E</color>
-    <color name="cs_amber">#F5B942</color>
-    <color name="cs_purple">#A78BFA</color>
-    <color name="cs_blue">#38BDF8</color>
-    <color name="cs_pink">#F472B6</color>
-    <color name="cs_tint_green">#123528</color>
-    <color name="cs_tint_red">#3A1F28</color>
-    <color name="cs_tint_amber">#38301C</color>
-    <color name="cs_tint_purple">#2A2140</color>
-    <color name="cs_tint_blue">#16303F</color>
-    <color name="cs_tint_pink">#38202E</color>
+    <color name="cs_red">#FF6B85</color>
+    <color name="cs_amber">#FFC46B</color>
+    <color name="cs_purple">#B5A0FF</color>
+    <color name="cs_blue">#65C7FF</color>
+    <color name="cs_pink">#FF8DC9</color>
+    <color name="cs_tint_green">#15372F</color>
+    <color name="cs_tint_red">#3A202C</color>
+    <color name="cs_tint_amber">#3B3020</color>
+    <color name="cs_tint_purple">#292442</color>
+    <color name="cs_tint_blue">#162E43</color>
+    <color name="cs_tint_pink">#3A2133</color>
 
-    <!-- Dashboard hero gradient (green to blue, as approved). -->
-    <color name="cs_hero_start">#0D3B2E</color>
-    <color name="cs_hero_end">#123A5C</color>
-    <color name="cs_hero_border">#1E4638</color>
+    <color name="cs_hero_start">#211F4A</color>
+    <color name="cs_hero_end">#103B3A</color>
+    <color name="cs_hero_border">#38365F</color>
 </resources>
