@@ -10,20 +10,33 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="24dp">
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:paddingTop="22dp"
+        android:paddingBottom="24dp">
+
+        <TextView
+            style="@style/CS.Caption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="7dp"
+            android:text="@string/app_name"
+            android:textAllCaps="true"
+            android:letterSpacing="0.14"
+            android:textColor="@color/cs_accent_dark" />
 
         <TextView
             style="@style/CS.Heading"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/settings_title"
-            android:textSize="24sp" />
+            android:textSize="28sp" />
 
         <LinearLayout
             style="@style/CS.Card"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="16dp"
             android:orientation="vertical">
 
             <TextView
@@ -235,7 +248,7 @@
                 style="@style/CS.Heading"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="16dp"
                 android:text="@string/theme_label" />
 
             <RadioGroup
@@ -272,7 +285,7 @@
             style="@style/CS.Button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="16dp"
             android:text="@string/save" />
     </LinearLayout>
 </ScrollView>
